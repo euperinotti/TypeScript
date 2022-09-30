@@ -1,2 +1,2 @@
 # TypeScript
-repositório dedicado a testes do ts
+repositório dedicado a teste e aprendizado de TypeScript e NodeJs

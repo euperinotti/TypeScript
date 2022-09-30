@@ -1,0 +1,22 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "repositório dedicado a teste e aprendizado de TypeScript e NodeJs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/euperinotti/TypeScript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/euperinotti/TypeScript/issues"
+  },
+  "homepage": "https://github.com/euperinotti/TypeScript#readme",
+  "devDependencies": {
+    "@types/node": "^18.7.23"
+  }
+}
