@@ -16,11 +16,7 @@
     "url": "https://github.com/euperinotti/TypeScript/issues"
   },
   "homepage": "https://github.com/euperinotti/TypeScript#readme",
-  "devDependencies": {
-    "@types/node": "^18.7.23",
-    "@types/validator": "^13.7.7"
-  },
   "dependencies": {
-    "validator": "^13.7.0"
+    "@types/node": "^18.8.3"
   }
 }
