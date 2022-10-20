@@ -16,13 +16,13 @@ server.set('view engine', 'mustache');
 server.set('views', path.join(__dirname,'views'));
 server.engine('mustache', mustache());
 
-server.get('/', (req: Request, res: Response) => {
-    res.send('Olá Mundo!');
-})
+// server.get('/', (req: Request, res: Response) => {
+//     res.send('Olá Mundo!');
+// })
 
 // Os arquivos presentes dentro desse diretorio estarao acessiveis
 // por meio de url
-server.use(express.static(path.join(__dirname,'../public')));
+// server.use(express.static(path.join(__dirname,'../public')));
 
 server.use(mainRoutes);
 
