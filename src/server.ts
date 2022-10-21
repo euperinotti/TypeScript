@@ -22,7 +22,7 @@ server.engine('mustache', mustache());
 
 // Os arquivos presentes dentro desse diretorio estarao acessiveis
 // por meio de url
-// server.use(express.static(path.join(__dirname,'../public')));
+server.use(express.static(path.join(__dirname,'../public')));
 
 server.use(mainRoutes);
 
