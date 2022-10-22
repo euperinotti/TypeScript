@@ -7,26 +7,24 @@ class User {
     lastName: string;
     age: number;
 
-    constructor(){
-        this.name = '';
-        this.lastName = '';
-        this.age = 0;
+    constructor(name: string, lastName: string, age: number){
+        this.name = name;
+        this.lastName = lastName;
+        this.age = age;
     }
 }
 
-const perinotti = new User();
+// const perinotti = new User('Guilherme', 'Perinotti', 19);
 
-perinotti.name = 'Guilherme';
-
-// let user: any = {
-//     name: 'Guilherme',
-//     lastName: 'Perinotti',
-//     age: 19
-// }
+let peri: User = {
+    name: 'a',
+    lastName: 'b',
+    age: 0
+}
 
 router.get('/', (req: Request, res: Response) => {
     res.render('home', {
-
+        user: peri
     })
 })
 
