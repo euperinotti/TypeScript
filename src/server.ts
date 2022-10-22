@@ -1,9 +1,9 @@
 // importando as bibliotecas ---------- 
 
-import express, { Router, Request, Response } from 'express';
+import express, { Request, Response } from 'express';
 import path from 'path';
 import mustache from 'mustache-express';
-import mainRoutes from '../routes/routes';
+import mainRoutes from '../routes';
 
 // configurando o serivdor ----------
 
@@ -14,11 +14,11 @@ server.set('view engine', 'mustache');
 server.set('views', path.join(__dirname,'views'));
 server.engine('mustache', mustache());
 
+server.use(mainRoutes);
+
 // Os arquivos presentes dentro desse diretorio estarao acessiveis
 // por meio de url
-// server.use(express.static(path.join(__dirname,'../public')));
-
-server.use(mainRoutes);
+server.use(express.static(path.join(__dirname,'../public')));
 
 server.use((req: Request, res: Response) => {
     res.status(404).send('Página não encontrada');

@@ -14,15 +14,14 @@ class User {
     }
 }
 
-// const perinotti = new User('Guilherme', 'Perinotti', 19);
-
 let peri: User = {
-    name: 'a',
-    lastName: 'b',
-    age: 0
+    name: 'Guilherme',
+    lastName: 'Perinotti',
+    age: 19
 }
 
 router.get('/', (req: Request, res: Response) => {
+    console.log('funcionou');
     res.render('home', {
         user: peri
     })
