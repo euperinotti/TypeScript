@@ -46,4 +46,14 @@ router.get('/', (req: Request, res: Response) => {
     })
 })
 
+router.get('/nome', (req, res) => {
+    console.log('Query String: ' + JSON.stringify(req.query));
+
+    let nome: string = req.query.nome as string;
+
+    res.render('pages/nome', {
+        nome
+    })
+})
+
 export default router;
