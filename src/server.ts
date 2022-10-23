@@ -9,6 +9,7 @@ import mainRoutes from '../routes';
 
 // instanciando o servidor
 const server = express();
+const port = 3000;
 
 server.set('view engine', 'mustache');
 server.set('views', path.join(__dirname,'views'));
@@ -24,4 +25,6 @@ server.use((req: Request, res: Response) => {
     res.status(404).send('Página não encontrada');
 })
 
-server.listen(3000); // porta do servidor
+server.listen(port, () => {
+    console.log(`Server running - port ${port}`);
+}); // porta do servidor

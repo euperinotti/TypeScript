@@ -29,12 +29,20 @@ let produto1: Product = {
     price: 10
 }
 
-let produto2 = new Product('banana');
+let produto2: Product = {
+    name: 'banana',
+    price: 15
+}
 
 router.get('/', (req: Request, res: Response) => {
     res.render('home', {
         user: peri,
-        produto: [produto1, produto2]
+        produto: [produto1, produto2],
+        frases: [
+            // 'alooo',
+            // 'uepa',
+            // 'ele gosta'
+        ]
     })
 })
 
