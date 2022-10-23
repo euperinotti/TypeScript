@@ -11,10 +11,9 @@
     <h1>Titulo da pagina</h1>
     <hr>
     
-    Bem vindo {{user.name}} {{user.lastName}}!
-    {{user.age}}
-
-
+    {{#user.showWelcome}}
+        Bem vindo {{user.name}} {{user.lastName}}! {{user.age}}
+    {{/user.showWelcome}}
 
     <hr>
     <h2>Produto</h2>
