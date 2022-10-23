@@ -35,7 +35,7 @@ let produto2: Product = {
 }
 
 router.get('/', (req: Request, res: Response) => {
-    res.render('home', {
+    res.render('pages/home', {
         user: peri,
         produto: [produto1, produto2],
         frases: [
