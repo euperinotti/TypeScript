@@ -15,6 +15,9 @@ server.set('view engine', 'mustache');
 server.set('views', path.join(__dirname,'views'));
 server.engine('mustache', mustache());
 
+// Habilita o servidor para pegar requisicoes via metodo POST
+server.use(express.urlencoded({extended: true}));
+
 server.use(mainRoutes);
 
 // Os arquivos presentes dentro desse diretorio estarao acessiveis

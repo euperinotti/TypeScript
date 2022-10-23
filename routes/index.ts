@@ -46,10 +46,20 @@ router.get('/', (req: Request, res: Response) => {
     })
 })
 
-router.get('/nome', (req, res) => {
-    console.log('Query String: ' + JSON.stringify(req.query));
+// router.get('/nome', (req, res) => {
+//     console.log('Query String: ' + JSON.stringify(req.query));
 
-    let nome: string = req.query.nome as string;
+//     let nome: string = req.query.nome as string;
+
+//     res.render('pages/nome', {
+//         nome
+//     })
+// })
+
+router.post('/nome-resultado', (req, res) => {
+    console.log('Query String: ' + JSON.stringify(req.body));
+
+    let nome: string = req.body.nome as string;
 
     res.render('pages/nome', {
         nome
