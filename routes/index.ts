@@ -1,18 +1,9 @@
 import { Router, Request, Response } from 'express';
+import { listaProduto } from '../src/controllers/product.controller';
 
 const router = Router();
 
-router.get('/', (req: Request, res: Response) => {
-    res.render('pages/home', {
-        user: peri,
-        produto: [produto1, produto2],
-        frases: [
-            // 'alooo',
-            // 'uepa',
-            // 'ele gosta'
-        ]
-    })
-})
+router.get('/', listaProduto);
 
 // router.get('/nome', (req, res) => {
 //     console.log('Query String: ' + JSON.stringify(req.query));
