@@ -1,7 +1,15 @@
 import { Request, Response } from "express";
 import Product from '../models/Product';
+import User from '../models/User';
 
-export const listaProduto = (req: Request, res: Response) => {
+export const home = (req: Request, res: Response) => {
+    let peri: User = {
+        name: 'Guilherme',
+        lastName: 'Perinotti',
+        age: 19,
+        showWelcome: true
+    }
+
     let produto1: Product = {
         name: 'maca',
         price: 10
@@ -13,6 +21,7 @@ export const listaProduto = (req: Request, res: Response) => {
     }
 
     res.render('pages/home', {
+        user: peri,
         produto: [produto1, produto2]
     });
 }

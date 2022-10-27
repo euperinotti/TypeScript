@@ -1,28 +1,13 @@
 import { Router, Request, Response } from 'express';
-import { listaProduto } from '../src/controllers/product.controller';
+import { home } from '../src/controllers/home.controller';
+import { formGet, formPost } from '../src/controllers/form.controller';
 
 const router = Router();
 
-router.get('/', listaProduto);
+router.get('/', home);
 
-// router.get('/nome', (req, res) => {
-//     console.log('Query String: ' + JSON.stringify(req.query));
+router.get('/nome', formGet);
 
-//     let nome: string = req.query.nome as string;
-
-//     res.render('pages/nome', {
-//         nome
-//     })
-// })
-
-router.post('/nome-resultado', (req, res) => {
-    console.log('Query String: ' + JSON.stringify(req.body));
-
-    let nome: string = req.body.nome as string;
-
-    res.render('pages/nome', {
-        nome
-    })
-})
+router.post('/nome-resultado', formPost);
 
 export default router;
