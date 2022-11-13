@@ -3,7 +3,14 @@ import Product from '../models/Product';
 import User from '../models/User';
 import { sequelize } from '../instances/mysql';
 
-export const home = (req: Request, res: Response) => {
+export const home = async (req: Request, res: Response) => {
+    try{
+        await sequelize.authenticate();
+        console.log('Conexão estabelecida com sucesso');
+    } catch(error){
+        console.log('Deu problema na conexão', error);
+    }
+    
     let peri: User = {
         name: 'Guilherme',
         lastName: 'Perinotti',
