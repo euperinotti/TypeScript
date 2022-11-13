@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import Product from '../models/Product';
 import User from '../models/User';
+import { sequelize } from '../instances/mysql';
 
 export const home = (req: Request, res: Response) => {
     let peri: User = {
