@@ -4,12 +4,14 @@ import express, { Request, Response } from 'express';
 import path from 'path';
 import mustache from 'mustache-express';
 import mainRoutes from '../routes';
+import dotenv from 'dotenv';
 
 // configurando o serivdor ----------
+dotenv.config();
 
 // instanciando o servidor
 const server = express();
-const port = 3000;
+const port = process.env.PORT;
 
 server.set('view engine', 'mustache');
 server.set('views', path.join(__dirname,'views'));
