@@ -6,10 +6,21 @@ import { User } from '../models/User';
 export const home = async (req: Request, res: Response) => {
     let users = await User.findAll({
         where: {
-            [Op.or]: [
-                { nome: 'tiago' },
-                { idade: 20 }
-            ]
+            nome: {
+                [Op.like]: '%a%'
+            },
+            idade: {
+                // [Op.gt]: 18, -> Maior que
+                // [Op.gte]: 18, -> Maior ou igual
+                // [Op.lt]: 20, -> Menor que
+                [Op.lte]: 20 // Menor ou igual a
+                // [Op.between]: [10, 20] -> Retorna dados que estejam entre 10 e 20
+            }
+
+            // [Op.or]: [
+            //     { nome: 'tiago' },
+            //     { idade: 20 }
+            // ]
         }
     })
 
