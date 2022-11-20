@@ -17,14 +17,16 @@ export const home = async (req: Request, res: Response) => {
             //     // [Op.between]: [10, 20] -> Retorna dados que estejam entre 10 e 20
             // }
 
-            // [Op.or]: [
+            // [Op.or]: [ // Condicoes de busca
             //     { nome: 'tiago' },
             //     { idade: 20 }
             // ]
         }, order: [
             ['idade', 'DESC'], // ASC ou DESC
             ['nome', 'ASC']
-        ]
+        ],
+        offset: 1, // Pula x itens da consulta
+        limit: 3 // Limita a consulta a 3 itens apenas
     })
 
     console.log(JSON.stringify(users));
