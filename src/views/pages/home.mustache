@@ -1,34 +1,22 @@
 {{>partials/head}}
 
-    <h1>Titulo da pagina</h1>
+    <h1>Controle de usuarios</h1>
     <hr>
-    
-    {{#user.showWelcome}}
-        Bem vindo {{user.name}} {{user.lastName}}! {{user.age}}
-    {{/user.showWelcome}}
-
-    <hr>
-    <h2>Produto</h2>
-
-    <ul>
-    {{#produto}}
-        <li>Nome: {{name}} | Preco: {{price}} </li>
-    {{/produto}}
-    </ul>
-
-    <hr>
-
-    <ul>
-        {{#frases}}
-            <li>{{.}}</li>
-        {{/frases}}
-        {{^frases}}
-            <li>Nao ha frases pra serem exibidas</li>
-        {{/frases}}
-    </ul>
-
-    <hr>
-
+    <fieldset>
+        <legend>Novo Usuario</legend>
+        <form action="/novousuario" method="GET">
+            <label for="nome">
+                Nome: <input type="text" name="nome" id="nome">
+            </label>
+            <label for="sobrenome">
+                Sobrenome: <input type="text" name="sobrenome" id="sobrenome">
+            </label>
+            <label for="idade">
+                idade: <input type="number" name="idade" id="idade">
+            </label>
+            <input type="submit" value="Salvar">
+        </form>
+    </fieldset>
     <ul>
     {{#users}}
         <li>{{nome}} - {{idade}}</li>

@@ -2,9 +2,9 @@ import { Model, DataTypes } from 'sequelize';
 import { sequelize } from '../instances/mysql';
 
 interface UserInstance extends Model {
-    name: string;
-    lastName: string;
-    age: number;
+    nome: string;
+    sobrenome: string;
+    idade: number;
 }
 
 export const User = sequelize.define<UserInstance>("User", {
