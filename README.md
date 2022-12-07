@@ -1,2 +1,2 @@
 # TypeScript
-repositório dedicado a teste e aprendizado de TypeScript e NodeJs
+Repositório dedicado a testes e estudos de TypeScript e NodeJs no curso b7web
